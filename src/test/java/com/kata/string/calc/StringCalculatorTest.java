@@ -38,4 +38,28 @@ public class StringCalculatorTest {
         int sum = stringCalculator.generateSum("2");
         assertEquals("The sum should be 2 as the string number contained only 2", 2, sum);
     }
+
+    @Test
+    public void testStringWithMultipleNumbersNoSpacesIsHandled() {
+        int sum = stringCalculator.generateSum("1,2");
+        assertEquals("The sum should be 3", 3, sum);
+    }
+
+    @Test
+    public void testStringWithMultipleNumbersWithSpacesIsHandled() {
+        int sum = stringCalculator.generateSum("1, 2");
+        assertEquals("The sum should be 3", 3, sum);
+    }
+
+    @Test
+    public void testStringWithMultipleNumbersAndWrongSeparatorIsHandled_ZeroReturned() {
+        int sum = stringCalculator.generateSum("1:2");
+        assertEquals("The sum should be 0", 0, sum);
+    }
+
+    @Test
+    public void testStringWithInvalidCharactersIsHandled_ZeroReturned() {
+        int sum = stringCalculator.generateSum("a");
+        assertEquals("The sum should be 0", 0, sum);
+    }
 }
