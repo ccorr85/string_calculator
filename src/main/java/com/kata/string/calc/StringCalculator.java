@@ -7,6 +7,9 @@ public class StringCalculator {
             return -1;
 
         }
+        if (numbersString.length() > 0 ) {
+            return Integer.valueOf(numbersString);
+        }
         return 0;
     }
 }
