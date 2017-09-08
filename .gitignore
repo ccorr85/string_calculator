@@ -3,3 +3,4 @@
 gradle/
 build/
 StringCalculator.iml
+out/
