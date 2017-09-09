@@ -5,6 +5,7 @@ public class StringCalculator {
     private static final String NUMBER_SEPARATOR = ",";
     
     public int generateSum(String numbersString) {
+        System.out.println("Generating Sum method");
         if(numbersString == null) {
             System.out.println("No sum could be generated as the value is null");
             return -1;
