@@ -6,6 +6,7 @@ public class StringCalculator {
     
     public int generateSum(String numbersString) {
         if(numbersString == null) {
+            System.out.println("No sum could be generated as the value is null");
             return -1;
 
         }
